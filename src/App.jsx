@@ -1,20 +1,18 @@
+// src/App.jsx
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import IngredientList from "./components/IngredientList/IngredientList";
 import BurgerStack from "./components/BurgerStack/BurgerStack";
-import "./App.css";
-// src/App.jsx
-
 import "./App.css";
 
 const App = () => {
   const [stack, setStack] = useState([]);
+
   const addToBurger = (ingredient) => {
     setStack([...stack, ingredient]);
   };
+
   const removeFromBurger = (index) => {
-    setStack(stack.filter((_, i) => i !== index)); //_ ignore the value only use index
+    setStack(stack.filter((_, i) => i !== index));
   };
 
   const availableIngredients = [
@@ -39,11 +37,14 @@ const App = () => {
       <h1>Burger Stacker</h1>
       <section>
         <IngredientList
-          availableIngredients={availableIngredients}
+          ingredients={availableIngredients}
           addToBurger={addToBurger}
         />
 
-        <BurgerStack stack={stack} removeFromBurger={removeFromBurger} />
+        <BurgerStack
+          ingredients={stack}
+          removeFromBurger={removeFromBurger}
+        />
       </section>
     </main>
   );
