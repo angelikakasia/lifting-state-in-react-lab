@@ -2,7 +2,7 @@
 
 const IngredientList = ({ availableIngredients, addToBurger }) => {
   return (
-    <ul>
+    <ul className="ingredient-list">
       {availableIngredients.map((ingredient, index) => (
         <li
           key={index}

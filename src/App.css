@@ -77,3 +77,14 @@ button {
   background-color: #1a1a1a;
   border: 1px solid transparent;
 }
+.ingredient-list,
+.burger-stack {
+  width: 45%;
+}
+section {
+  align-items: stretch;
+}
+
+.burger-stack {
+  justify-content: flex-start;
+}

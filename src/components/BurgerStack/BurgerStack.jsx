@@ -2,7 +2,7 @@
 
 const BurgerStack = ({ stack, removeFromBurger }) => {
   return (
-    <ul>
+    <ul className="burger-stack">
       {stack.map((ingredient, index) => (
         <li
           key={index}
