@@ -1,9 +1,9 @@
 // src/components/IngredientList/IngredientList.jsx
 
-const IngredientList = ({ availableIngredients, addToBurger }) => {
+const IngredientList = ({ ingredients, addToBurger }) => {
   return (
     <ul className="ingredient-list">
-      {availableIngredients.map((ingredient, index) => (
+      {ingredients.map((ingredient, index) => (
         <li
           key={index}
           style={{ backgroundColor: ingredient.color }}
@@ -13,7 +13,7 @@ const IngredientList = ({ availableIngredients, addToBurger }) => {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default IngredientList
+export default IngredientList;

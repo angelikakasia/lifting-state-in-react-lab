@@ -1,9 +1,9 @@
 // src/components/BurgerStack/BurgerStack.jsx
 
-const BurgerStack = ({ stack, removeFromBurger }) => {
+const BurgerStack = ({ ingredients, removeFromBurger }) => {
   return (
     <ul className="burger-stack">
-      {stack.map((ingredient, index) => (
+      {ingredients.map((ingredient, index) => (
         <li
           key={index}
           style={{ backgroundColor: ingredient.color }}
@@ -13,7 +13,7 @@ const BurgerStack = ({ stack, removeFromBurger }) => {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default BurgerStack
+export default BurgerStack;
